@@ -1586,11 +1586,12 @@ footer p {
     }
 
     .proj-text h1 {
-    font-size: 2.8vw;
+        font-size: 2.8vw;
     }
 
     .proj-text h5 {
         font-size: 1.8vw;
+        padding-top: 2vw;
     }
 
     .proj-text h3 {
@@ -1605,7 +1606,7 @@ footer p {
 
     .cards-container {
         gap: 30px;
-        margin-top: -12vw;
+        margin-top: -15vw;
     }
 
     .card {
