@@ -1,0 +1,335 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eeedf4; 
+    font-family: Arial, sans-serif;
+}
+  
+/* nav */
+.navbar {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    background-color: #eeedf4;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eeedf4; 
+    gap: 10px; 
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+  
+.nav {
+    width: 100%; 
+    display: flex;
+    /* position: sticky; */
+    background-color: #eeedf4;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.logo img {
+    width: 6vw;
+    object-fit: contain; 
+    margin-left: 20px;
+    margin-top: 1vw;
+}
+  
+.back-button {
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 0.5vw;
+    width: 6vw;
+    background-color: #0D0E0E;
+    color: #eeedf4;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+  
+.back-button:hover {
+    background-color: #444;
+}
+
+/* toprow content   */
+.top-row {
+    width: 80%; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 40px; 
+    margin: 0 auto; 
+}
+
+.line {
+    flex-grow: 1; 
+    height: 2px;
+    background-color: #0D0E0E; 
+    opacity: 0.5;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle img {
+    width: 3vw;
+    height: 3vw;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* opening word */
+.opening-word h1 {
+    text-align: center;
+    font-size: 2vw;
+}
+  
+/* form */
+/* General Container Styling */
+.form-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    /* background-color: #f3f3f8; */
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* Form Rows for Name and Email */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 4vw; 
+}
+
+/* Individual Form Group Styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5vw;
+    gap: 10px; /* Jarak antara label dan input di dalam kolom */
+    flex: 1; /* Membagi ruang secara merata jika ada banyak kolom */
+}
+
+/* Label Styling */
+.form-group label {
+    font-weight: bold;
+    font-size: 1.3vw;
+    margin-bottom: 5px;
+}
+
+/* Input, Select, and Textarea Styling */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 1.1vw;
+    outline: none;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #555;
+}
+
+.option {
+    width: 100%;
+    background-color: #eeedf4;
+}
+
+/* Submit Button Container */
+.submit-btn-container {
+    display: flex;
+    justify-content: center; /* Memusatkan tombol submit */
+    width: 100%;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    width: 25%;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #333;
+}
+
+/* Notifikasi Container */
+#notification {
+    display: none;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    position: relative;
+}
+
+/* Warna untuk sukses */
+#notification.success {
+    background-color: #d4edda; /* Hijau lembut */
+    color: #155724; /* Hijau gelap */
+    border: 1px solid #c3e6cb;
+}
+
+/* Warna untuk error */
+#notification.error {
+    background-color: #f8d7da; /* Merah lembut */
+    color: #721c24; /* Merah gelap */
+    border: 1px solid #f5c6cb;
+}
+
+/* Ikon Close */
+#notification .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: inherit;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+#notification .close-btn:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* Responsiveness for Mobile and Tablet */
+@media (max-width: 992px) {
+    .navbar {
+        margin-left: 2vw;
+        margin-right: 2vw;
+        padding: 10px 15px;
+    }
+
+    .logo img {
+        width: 12vw;
+        margin-left: 10px;
+    }
+
+    .nav {
+        /* flex-direction: column; */
+        align-items: center;
+        gap: 20px;
+    }
+
+    .back-button {
+        width: 20%;
+        padding: 10px 0;
+        font-size: 3vw;
+        /* margin-top: 10px; */
+    }
+
+    .top-row {
+        /* flex-direction: column; */
+        width: 90%;
+        gap: 20px;
+    }
+
+    .line {
+        flex-grow: 1;
+        height: 1px;
+        /* margin-top: 10px; */
+    }
+
+    .icon-container {
+        width: 5vw;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .circle img {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    .opening-word h1 {
+        font-size: 4vw;
+    }
+
+    .form-container {
+        width: 80%;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        font-size: 4vw;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 4vw;
+        padding: 12px;
+    }
+
+    .submit-btn {
+        width: 50%;
+        font-size: 4vw;
+    }
+}
+
+/* Responsiveness for Small Mobile */
+@media (max-width: 480px) {
+    .logo img {
+        width: 20vw;
+    }
+
+    .submit-btn {
+        width: 70%;
+        font-size: 5vw;
+    }
+
+    .icon {
+        width: 30px; /* Ikon lebih besar di perangkat kecil */
+        height: 30px;
+    }
+
+    .circle img {
+        width: 7vw; /* Ukuran ikon dalam lingkaran lebih besar */
+        height: 7vw;
+    }
+}

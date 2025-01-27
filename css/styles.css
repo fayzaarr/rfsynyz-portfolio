@@ -1,0 +1,3767 @@
+/* css */
+
+body {
+    background-color: #eeedf4;
+    margin: 0px;
+    font-family: 'Quick Sand', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    overflow-x: hidden;
+}
+
+.logo {
+    height: 45px;
+    width: 45px;
+    background-image: url(../assets/assets1/9RjhQp-LogoMakr.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.mainHeader {
+    position: sticky;       
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 20px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    background-color: #eeedf4; 
+    z-index: 1000;  /* Pastikan z-index cukup tinggi */
+    transition: border-bottom 0.3s ease; /* Transisi untuk border-bottom */
+}
+
+.mainHeader.scroll-border {
+    border-bottom: 3px solid #636363;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Optional: Jika ingin rata tengah */
+    gap: 20px; /* Jarak antar elemen nav */
+}
+
+nav > a {
+    position: relative;
+    padding: 5px 20px;
+    color: #0D0E0E;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+nav > a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    height: 2px;
+    width: 100%;
+    background-color: #383737;
+    transition: transform 0.3s ease;
+}
+
+nav > a:hover::after {
+    transform: translateX(-50%) scaleX(1);  /* Efek garis muncul saat hover */
+}
+
+nav > a:hover {
+    color: #0D0E0E;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hamburger Menu Styling */
+.hamburger-menu {
+    display: none; /* Sembunyikan secara default */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #0D0E0E;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Section Home */
+#section-home {
+    position: relative; 
+    width: 100%;
+    height: 34vw;
+    /* margin: 0 auto; */
+    display: flex;
+    color: #ffffff; 
+    overflow: hidden; 
+    font-weight: lighter;
+}
+
+#section-home::before {
+    content: '';
+    background: url(../assets/assets1/banner1.png) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.11; 
+    z-index: -1; 
+}
+
+.secHome h1 {
+    font-size: 3.8vw;
+    font-weight: bold;
+    color: #0D0E0E;
+    z-index: 1;
+    padding-left: 80px;
+    padding-top: 9vw;
+    padding-bottom: 44px;
+    margin: 0px;
+}
+
+.secHome p {
+    font-size: 1.2vw;
+    color: #0D0E0E; 
+    z-index: 1; 
+    padding-left: 80px;
+    margin: 0px;
+}
+
+.secHome p span{
+    font-weight: 700;
+}
+
+/* Social Media Links */
+.social-links {
+    position: absolute;
+    bottom: 1vw;
+    right: 60px;
+    display: flex;
+    gap: 20px;        
+}
+
+.social-links a {
+    display: inline-block;
+}
+
+.social-links img {
+    width: 2.3vw;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2); 
+}
+
+/* Section Profile */
+#section-profile {
+    position: relative; 
+    color: #eeedf4; 
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+}
+.sec-prof {
+    background-color: #0D0E0E;
+    color: #eeedf4;
+    /* padding: 70px 60px; */
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+}
+
+.profile-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.aboutme {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.prof-text {
+    padding-top: 50px;
+}
+
+.prof-text h5 {
+    font-size: 2vh;
+    margin: 0;
+    line-height: 1.2;
+    opacity: 0.60; 
+    z-index: -1; 
+}
+
+.prof-text .about-container {
+    display: flex; /* Mengatur elemen dalam satu baris */
+    align-items: center; /* Vertikal sejajar */
+    gap: 10px; /* Jarak antara teks dan ikon */
+}
+
+.prof-text .cvbutton {
+    width: 40px; /* Ukuran ikon */
+    height: 40px;
+    cursor: pointer; /* Ikon jadi clickable */
+}
+
+.prof-text .cvbutton:hover {
+    /* background-color:#5CA1E5;
+    color: #eeedf4; */
+    transform: scale(1.2);
+}
+
+.prof-text h1 {
+    color: #5CA1E5;
+    font-size: 4vh;
+    margin: 0;
+}
+
+.prof-text p {
+    font-size: 2.3vh;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.prof-text p span {
+    font-weight: bold;
+    color: #5CA1E5;
+}
+
+.prof-text h4 {
+    font-size: 2.3vh;
+    margin: 0;
+    padding-bottom: 5px;
+    font-weight: normal;
+}
+
+.prof-image img {
+    width: 20vw;
+    height: 25vw;
+    border-radius: 35%;
+    object-fit: cover;
+    border: 2px solid #eeedf4;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+/* skill */
+.container {
+    position: relative;
+    background-color: #0D0E0E; 
+    display: grid;
+    place-items: center;
+    overflow: visible; 
+    top: -15%;
+}
+
+.rounded {
+    position: absolute;
+    top: 2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150vw; /* Tetap melebihi lebar viewport */
+    min-height: 90%;
+    height: auto;
+    background-color: #eeedf4;
+    border-radius: 40%;
+    z-index: 1;
+    overflow: hidden;
+    display: flex; /* Flexbox untuk memudahkan penataan konten */
+    justify-content: center; /* Menjaga konten tetap di tengah */
+    align-items: center; /* Menjaga konten tetap di tengah */
+}
+
+/* Kotak utama */
+.kotak {
+    width: 85vw;
+    height: 50vw;
+    background-color: #eeedf4;
+    border: 1px solid #000000;
+    border-radius: 5%;
+    position: absolute;
+    top: -5vh; 
+    z-index: 2; /* Kotak berada di depan rounded */
+    display: flex;
+    flex-direction: row; /* Ubah arah flex ke horizontal */
+    justify-content: space-evenly; /* Jarak antar sekat vertikal */
+    align-items: center; /* Pastikan sekat berada di tengah vertikal */
+    position: relative;
+}
+
+/* Sekat garis */
+.sekat {
+    width: 1px;               /* Lebar garis vertikal */
+    height: 100%;             /* Tinggi penuh kotak */
+    background-color: #000000;   /* Warna garis */
+    margin: 10px 0; 
+}
+
+/* Kolom dalam Kotak */
+.kolom {
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    /* justify-content: center;  */
+    align-items: center; 
+    padding: 3vw; /* 30px */
+    text-align: center; 
+}
+
+.icon img {
+    width: 5vw; /* 80px */
+    height: 5vw; /* 80px */
+    margin-top: 3vw; /* 50px */
+    margin-bottom: 15px; /* Memberikan jarak antara gambar dan teks */
+    display: block; /* Pastikan gambar menjadi elemen blok */
+    margin-left: auto; /* Untuk centering horizontal */
+    margin-right: auto; /* Untuk centering horizontal */
+}
+
+.kolom h2 {
+    font-size: 2.4vh;
+    color: #000;
+    margin: 10px 0;
+    margin-bottom: 2vw;
+    text-align: center;
+    font-weight: 750;
+}
+
+.kolom h4 {
+    font-size: 1.7vh;
+    color: #000;
+    margin: 10px 0;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: normal;
+}
+
+.kolom h3 {
+    font-size: 1.7vh;
+    color: #000;
+    margin: 10px 0;
+    margin-top: 4vw;
+    margin-bottom: 1vw;
+    text-align: center;
+    font-weight: 750;
+}
+
+.kolom p {
+    font-size: 1.7vh;
+    color: #000000;
+    margin: 10px 0;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: normal;
+}
+
+ul{
+    font-size: 1.7vh;
+    color: #000000;
+    margin: 0.8vw 0px;
+    margin-bottom: 4vw;
+    text-align: center;
+    font-weight: normal;
+    list-style-type: none;
+    padding: 0px;
+}
+
+/* chart */
+.charts-container {
+    display: flex;
+    gap: 20px;
+    z-index: 3;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+    /* top: -5%; */
+}
+
+.chart {
+    background-color: #eeedf4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(0, 0, 0);
+    width: 20vw;
+    min-height: 250px;
+    align-content: center;
+}
+
+.chart-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.bar-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.bar-label {
+    flex: 0 0 100px; /* Fixed width for label alignment */
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+.bar-wrapper {
+    flex: 1; 
+    height: 20px;
+    background-color: #a2a2a274; 
+    border-radius: 10px;
+    overflow: hidden; 
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    background: linear-gradient(to right, #8b8b8b, #171717);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    width: 0; 
+    animation: fillBar 1.5s ease-out forwards;
+    transition: width 1.5s ease-out;
+}
+
+.bar-fill::after {
+    content: attr(data-value) "%";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Animation for bar-fill */
+@keyframes fillBar {
+    to {
+        width: var(--fill-width);
+    }
+}
+
+/* projects */
+#section-projects {
+    position: relative;
+    width: auto;
+    height: 23vw;
+    padding-left: 120px;
+    padding-right: 100px;
+}
+
+.sec-proj {
+    background-color: #0D0E0E;
+    color: #eeedf4;
+}
+
+.project-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.myproj {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 5vw;
+}
+
+.proj-text h5 {
+    font-size: 2vh;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    opacity: 0.60; 
+    z-index: 4; 
+    text-align: center;
+}
+
+.proj-text h1 {
+    font-size: 2.5vw;
+    margin: 0;
+    padding: 0;
+    z-index: 4; 
+    text-align: center;
+    font-weight: 800;
+}
+
+.proj-text h3 {
+    font-size: 2.2vh;
+    /* margin-top: 30px; */
+    margin-left: 70px;
+    margin-right: 70px;
+    z-index: 4; 
+    text-align: center;
+    font-weight: lighter;
+}
+
+/* card container */
+.bg-cardproj {
+    position: relative;
+    background-color: #eeedf4; 
+    /* height: 41.5vh; */ /* Hapus atau komentar */
+    width: 100%;
+    /* padding: 20px 0;  */
+    margin-top: 35vh;
+    display: grid;
+    overflow: visible; 
+    z-index: 2;
+}
+
+.cards-container {
+    /* display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    margin-top: -25vw; 
+    z-index: 3;
+    width: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    /* margin-top: -40vh; */
+    margin-top: -43vh;
+    z-index: 3;
+    width: 100%;
+    /* height: 10vh; */
+    /* height: 10vh; */ /* Hapus atau komentar */
+}
+
+/* Card Styling */
+.card {
+    background-color: #eeedf4;
+    border-radius: 20px;
+    /* border: 1px solid #000000; */
+    box-shadow: 0 1px 5px rgb(0, 0, 0);
+    width: 25vw;
+    height: 35vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h5 {
+    margin: 0px;
+    margin-top: 2vh;
+    opacity: 0.60;
+    font-size: 2.3vh;
+}
+
+.card h1 {
+    margin: 0px;
+    font-size: 3.5vh;
+}
+
+.card p {
+    margin: 0px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    font-size: 1.2vw;
+    padding: 20px;
+    line-height: 1.5;
+    font-weight: lighter;
+}
+
+a.btn-proj {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+    color: #eeedf4;
+    background-color: #0D0E0E;
+    padding: 10px 50px;
+    gap: 18px;
+    font-size: 2.3vh;
+    box-shadow: 0 4px 8px #000000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a.btn-proj:hover {
+    background-color: #8b8b8b;
+    color: #0D0E0E;
+    border: 1px solid #ffffff;
+    box-shadow: 0 4px 8px #000000;
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    width: 1.8vw;
+    /* height: 3.7vh; */
+    filter: brightness(0) invert(1); /* Putih */
+}
+
+.btn-proj:hover .btn-icon {
+    filter: grayscale(100%) brightness(0.1);
+}
+
+.line {
+    width: 90%; 
+    height: 0.5px; 
+    background-color: #0D0E0E; 
+    margin: auto;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+/* section services */
+.bg-service {
+    position: relative;
+    background-color: #eeedf4; 
+    height: 28vw; 
+    width: 100%; 
+    justify-items: center;
+    overflow: visible; 
+    z-index: 2;
+}
+
+.bg-service h1 {
+    font-size: 2.5vw;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.bg-service h5 {
+    font-size: 1.3vw;
+    font-weight: bold;
+    margin: 0px;
+    margin-top: 1vh;
+    opacity: 0.6;
+}
+
+.bg-service h3 {
+    text-align: center;
+    font-size: 1.3vw;
+    margin-top: 1vw;
+}
+
+.card-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 2vw;
+    z-index: 3;
+    width: 100%;
+    height: 25vh;
+}
+
+.cont-services {
+    background-color: #eeedf4;
+    border-radius: 20px;
+    border: 1px solid #000000;
+    box-shadow: 0 3px 7px rgb(0, 0, 0);
+    width: 20vw;
+    height: 15vh;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cont-services h1 {
+    font-size: 1.8vw;
+    margin: 0px;
+    margin-top: 2vh;
+}
+
+.cont-services h4 {
+    font-size: 1vw;
+    margin-top: 2vw;
+    font-weight: 100;
+}
+
+.cont-services:hover {
+    transform: scale(1.05); /* Card akan membesar sedikit */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Shadow lebih besar */
+    background-color: #0D0E0E; /* Latar belakang berubah */
+    border-color: #ffffff; /* Border menjadi warna lain */
+    color: #eeedf4;
+}
+
+/* @media screen and (max-width: 1281px) {
+    .bg-service {
+        height: 31vw;
+    }
+} */
+
+/* start project */
+.start-proj {
+    position: relative;
+    width: 100%; 
+    display: grid;
+    place-items: center;
+    overflow: visible; 
+    z-index: 2;
+}
+
+.bg-startproj {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 300px; */
+    z-index: 4;
+    width: 50%; /* Ukuran keseluruhan kontainer */
+    height: 4vw;
+    padding: 20px 40px 20px 40px;
+    border-radius: 15px;
+    background-color: #eeedf4;
+    box-shadow: 0 1px 6px rgb(0, 0, 0);
+    border: 1px solid #000000;
+}
+
+/* Teks di sisi kiri */
+.bg-startproj h1 {
+    font-size: 2vw;
+    font-weight: bold;
+    color: #0D0E0E;
+    margin: 0;
+}
+
+.hit-me-up-btn {
+    background-color: #eeedf4;
+    border: 1px solid #0D0E0E;
+    border-radius: 15px;
+    width: 7vw;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none; /* Menghilangkan garis bawah */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hit-me-up-btn:hover {
+    background-color: #000;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    position: relative;
+    display: flex; /* Gunakan flexbox untuk tata letak */
+    flex-direction: column; /* Susun elemen secara vertikal */
+    align-items: center; /* Tengah secara horizontal */
+    justify-content: center; /* Tengah secara vertikal */
+    width: 100%;
+    height: 60vh; /* Tetapkan tinggi footer */
+    background-color: #0D0E0E;
+    color: #eeedf4;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    padding: 0px;
+    padding-top: 30px;
+    margin-top: -3vw;
+}
+
+footer h1 {
+    font-size: 2.5vw;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+footer h3 {
+    font-size: 1.2vw;
+    margin-bottom: 30px;
+    opacity: 0.70;
+}
+
+footer hr {
+    width: 80%;
+    border: 0.5px solid #eeedf4;
+    opacity: 0.50;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 1vw;
+    margin-top: 20px;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex; /* Gunakan flexbox untuk ikon */
+    justify-content: center; /* Rata tengah secara horizontal */
+    align-items: center; /* Rata tengah secara vertikal */
+    gap: 20px; /* Jarak antar ikon */
+    margin: 20px 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Perbesar sedikit */
+}
+
+.social-icons img {
+    width: 60%; /* Ukuran ikon */
+    height: 60%;
+}
+
+/* @media screen and (max-width: 1199px) { */
+@media (max-width: 1200px) {
+    .mainHeader {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav > a {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Reduce font size */
+    }
+
+    .secHome h1 {
+        font-size: 4vw;
+        padding-left: 8vw;
+        padding-top: 8vw;
+        padding-bottom: 20px;
+    }
+
+    .secHome p {
+        font-size: 1.8vw;
+        padding-left: 84px;
+    }
+
+    .social-links {
+        bottom: 20px;
+        right: 40px;
+        gap: 10px;
+    }
+
+    .social-links img {
+        width: 3vw;
+    }
+
+    #section-profile {
+        padding-left: 9vw;
+        padding-right: 5vw;
+    }
+
+    .aboutme {
+        /* flex-direction: column; */
+        align-items: center;
+        gap: 5vw;
+    }
+
+    /* .prof-text .about-container {
+        justify-content: center;
+    } */
+    
+    .prof-text .cvbutton {
+        width: 40px; /* Ukuran ikon */
+        height: 40px;
+        cursor: pointer; /* Ikon jadi clickable */
+    }
+
+    .prof-text {
+        /* text-align: center; */
+        padding-top: 20px;
+    }
+
+    .prof-text h1 {
+        font-size: 2.5vw;
+    }
+
+    .prof-text h5 {
+        margin-right: 14vw;
+    }
+
+    .prof-text p {
+        font-size: 2.5vh;
+    }
+
+    .prof-image img {
+        width: 18vw;
+        height: auto;
+        /* margin: 0; */
+    }
+
+    .cv-button {
+        font-size: 2.5vh;
+        padding: 3px 27px;
+    }
+
+    .container {
+        top: 0;
+        padding: 10px;
+    }
+
+    .rounded {
+        /* width: 120vw;
+        border-radius: 50%;
+        width: 120vw;
+        min-height: 90%;
+        border-radius: 22%; */
+
+        width: 150vw; /* Lebar default */
+        top: 2vh; /* Posisi lebih ke atas */
+        border-radius: 40%; /* Tetap sesuai default */
+    }
+
+    .kolom {
+        /* width: 100%;
+        padding: 10px 0; */
+
+        width: 100%; /* Lebar penuh untuk setiap kolom */
+        margin-bottom: 3vw; /* Jarak antar kolom */
+    }
+
+    .icon img {
+        /* width: 15vw;
+        height: 15vw; */
+
+        width: 5vw;
+        height: auto;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+    }
+
+    .kolom h2 {
+        /* font-size: 4vw; */
+
+        font-size: 2.2vh; /* Perkecil ukuran font */
+        margin-bottom: 2vw; /* Jarak bawah judul */
+    }
+
+    .kolom h4, .kolom h3, .kolom p, ul {
+        /* font-size: 3vw; */
+        font-size: 2vh;
+        margin: 1vw 0;
+    }
+
+    .charts-container {
+        flex-direction: row; /* Susun chart secara vertikal */
+        gap: 15px; /* Kurangi jarak antar chart */
+        align-items: center; /* Pusatkan elemen */
+    }
+
+    .chart {
+        width: 36vh;
+        padding: 15px;
+        min-height: 200px;
+    }
+
+    .chart-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .bar-container {
+        margin-bottom: 12px;
+    }
+
+    .bar-label {
+        font-size: 14px;
+    }
+
+    .bar-wrapper {
+        height: 16px;
+    }
+
+    .bar-fill::after {
+        font-size: 11px;
+    } 
+
+    #section-projects {
+        /* padding-left: 60px;
+        padding-right: 50px;
+        height: auto; */
+
+        padding-left: 10vw;
+        padding-right: 10vw;
+        height: 20vw;
+    }
+
+    .proj-text h1 {
+    font-size: 2.8vw;
+    }
+
+    .proj-text h5 {
+        font-size: 1.5vw;
+    }
+
+    .proj-text h3 {
+        font-size: 1.4vw;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .bg-cardproj {
+        margin-top: 20vh;
+    }
+
+    .cards-container {
+        margin-top: -15vw;
+        gap: 30px;
+    }
+
+    .card {
+        width: 23vw;
+        height: 30vh;
+    }
+
+    .card h5 {
+        font-size: 2.5vw;
+    }
+
+    .card h1 {
+        font-size: 3vh;
+    }
+
+    .card p {
+        font-size: 1.8vh;
+        padding: 10px;
+    }
+
+    a.btn-proj {
+        font-size: 2.3vh;
+        padding: 10px 30px;
+        gap: 10px;
+    }
+
+    .btn-icon {
+        width: 2vw;
+    }
+
+    .line {
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+
+    .bg-service {
+        height: 35vw;
+    }
+
+    .bg-service h1 {
+        font-size: 3vw;
+    }
+
+    .bg-service h3 {
+        font-size: 1.8vw;
+        margin-top: 4vw;
+    }
+
+    .bg-service h5 {
+        font-size: 1.5vw;
+    }
+
+    .card-services {
+        gap: 30px; /* Kurangi jarak antar card */
+        height: auto; /* Ubah ke tinggi fleksibel */
+        margin-top: 3vw;
+    }
+
+    .cont-services {
+        width: 22vw;
+        height: auto;
+        padding: 20px;
+    }
+
+    .cont-services h1 {
+        font-size: 2vw;
+    }
+
+    .cont-services h4 {
+        font-size: 1.2vw;
+    }
+
+    .bg-startproj {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 50%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .bg-startproj h1 {
+        font-size: 2.5vw;
+        text-align: center;
+        /* margin-bottom: 10px; */
+    }
+
+    .hit-me-up-btn {
+        width: auto; /* Sesuaikan lebar tombol */
+        font-size: 1.5vw; /* Sesuaikan ukuran teks tombol */
+        padding: 10px 20px;
+    }
+
+    footer {
+        height: auto;
+        /* padding-top: 15vw; */
+    }
+
+    footer h1 {
+        font-size: 3vw; /* Sesuaikan ukuran teks untuk tablet */
+    }
+
+    footer h3 {
+        font-size: 1.5vw; /* Sesuaikan ukuran teks subjudul */
+        margin-bottom: 20px;
+    }
+
+    footer p {
+        font-size: 1.2vw;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        gap: 0px;
+        margin: 10px 0;
+    }
+
+    .social-icons a {
+        width: 9vw;
+        height: 9vw;
+    }
+
+    .social-icons img {
+        width: 50%; /* Ikon tetap proporsional */
+        height: 50%;
+    }
+}
+
+/* Custom Breakpoint: Tablet landscape (≤1024px) */
+/* @media (max-width: 1025px) { */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .mainHeader {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav > a {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+        font-size: 14px; /* Reduce font size */
+    }
+
+    .secHome h1 {
+        font-size: 4vw;
+        padding-left: 8vw;
+        padding-top: 8vw;
+        padding-bottom: 20px;
+    }
+
+    .secHome p {
+        font-size: 1.8vw;
+        padding-left: 84px;
+    }
+
+    .social-links {
+        bottom: 20px;
+        right: 40px;
+        gap: 10px;
+    }
+
+    .social-links img {
+        width: 3vw;
+    }
+
+    #section-profile {
+        padding-left: 17vw;
+        padding-right: 15vw;
+    }
+
+    .aboutme {
+        /* flex-direction: column; */
+        align-items: center;
+        gap: 5vw;
+    }
+
+    /* .prof-text .about-container {
+        justify-content: center;
+    } */
+    
+    .prof-text .cvbutton {
+        width: 40px; /* Ukuran ikon */
+        height: 40px;
+        cursor: pointer; /* Ikon jadi clickable */
+    }
+
+    .prof-text {
+        /* text-align: center; */
+        padding-top: 20px;
+    }
+
+    .prof-text h1 {
+        font-size: 2.5vw;
+    }
+
+    .prof-text h5 {
+        margin-right: 14vw;
+        font-size: 2.2vh;
+    }
+
+    .prof-text p {
+        font-size: 2vw;
+    }
+
+    .prof-image img {
+        width: 18vw;
+        height: auto;
+        /* margin: 0; */
+    }
+
+    .cv-button {
+        font-size: 2.5vh;
+        padding: 3px 27px;
+    }
+
+    .container {
+        top: 0;
+        padding: 10px;
+    }
+
+    .rounded {
+        /* width: 120vw;
+        border-radius: 50%;
+        width: 120vw;
+        min-height: 90%;
+        border-radius: 22%; */
+
+        width: 150vw; /* Lebar default */
+        top: 2vh; /* Posisi lebih ke atas */
+        border-radius: 40%; /* Tetap sesuai default */
+    }
+
+    .kolom {
+        /* width: 100%;
+        padding: 10px 0; */
+
+        width: 100%; /* Lebar penuh untuk setiap kolom */
+        margin-bottom: 3vw; /* Jarak antar kolom */
+    }
+
+    .icon img {
+        /* width: 15vw;
+        height: 15vw; */
+
+        width: 5vw;
+        height: auto;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+    }
+
+    .kolom h2 {
+        /* font-size: 4vw; */
+        font-size: 1.6vw;
+        margin-bottom: 2vw;
+    }
+
+    .kolom h4, .kolom h3, .kolom p, ul {
+        /* font-size: 3vw; */
+        font-size: 1.2vw;
+        margin: 1vw 0;
+    }
+
+    .charts-container {
+        flex-direction: row; /* Susun chart secara vertikal */
+        gap: 15px; /* Kurangi jarak antar chart */
+        align-items: center; /* Pusatkan elemen */
+    }
+
+    .chart {
+        width: 28vw;
+        padding: 15px;
+        min-height: 200px;
+    }
+
+    .chart-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .bar-container {
+        margin-bottom: 12px;
+    }
+
+    .bar-label {
+        font-size: 14px;
+    }
+
+    .bar-wrapper {
+        height: 16px;
+    }
+
+    .bar-fill::after {
+        font-size: 11px;
+    } 
+
+    #section-projects {
+        /* padding-left: 60px;
+        padding-right: 50px;
+        height: auto; */
+
+        padding-left: 10vw;
+        padding-right: 10vw;
+        height: 20vw;
+    }
+
+    .myproj {
+        padding-top: 1vw;
+    }
+
+    .proj-text h1 {
+    font-size: 2.8vw;
+    }
+
+    .proj-text h5 {
+        font-size: 1.8vw;
+    }
+
+    .proj-text h3 {
+        font-size: 1.4vw;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .bg-cardproj {
+        margin-top: 20vh;
+    }
+
+    .cards-container {
+        /* margin-top: -15vw;
+        gap: 30px; */
+        /* margin-top: -29vw;
+        gap: 30px; */
+
+        margin-top: -25vh;
+        gap: 30px;
+    }
+
+    .card {
+        width: 23vw;
+        height: auto;
+    }
+
+    .card h5 {
+        font-size: 1.5vw;
+        margin-top: 1vw;
+    }
+
+    .card h1 {
+        font-size: 2vw;
+    }
+
+    .card p {
+        font-size: 1.5vw;
+        padding: 10px;
+        margin: 1vw;
+    }
+
+    a.btn-proj {
+        font-size: 1.6vw;
+        padding: 10px 30px;
+        gap: 10px;
+    }
+
+    .btn-icon {
+        width: 2vw;
+    }
+
+    .line {
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+
+    .bg-service {
+        height: 35vw;
+    }
+
+    .bg-service h1 {
+        font-size: 3vw;
+    }
+
+    .bg-service h3 {
+        font-size: 1.8vw;
+        margin-top: 4vw;
+    }
+
+    .bg-service h5 {
+        font-size: 1.5vw;
+    }
+
+    .card-services {
+        gap: 30px; /* Kurangi jarak antar card */
+        height: auto; /* Ubah ke tinggi fleksibel */
+        margin-top: 3vw;
+    }
+
+    .cont-services {
+        width: 22vw;
+        height: auto;
+        padding: 20px;
+    }
+
+    .cont-services h1 {
+        font-size: 2vw;
+    }
+
+    .cont-services h4 {
+        font-size: 1.2vw;
+    }
+
+    .bg-startproj {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 50%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .bg-startproj h1 {
+        font-size: 2.5vw;
+        text-align: center;
+        /* margin-bottom: 10px; */
+    }
+
+    .hit-me-up-btn {
+        width: auto; /* Sesuaikan lebar tombol */
+        font-size: 1.5vw; /* Sesuaikan ukuran teks tombol */
+        padding: 10px 20px;
+    }
+
+    footer {
+        height: auto;
+        /* padding-top: 15vw; */
+    }
+
+    footer h1 {
+        font-size: 3vw; /* Sesuaikan ukuran teks untuk tablet */
+    }
+
+    footer h3 {
+        font-size: 1.5vw; /* Sesuaikan ukuran teks subjudul */
+        margin-bottom: 20px;
+    }
+
+    footer p {
+        font-size: 1.2vw;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        gap: 0px;
+        margin: 10px 0;
+    }
+
+    .social-icons a {
+        width: 9vw;
+        height: 9vw;
+    }
+
+    .social-icons img {
+        width: 50%; /* Ikon tetap proporsional */
+        height: 50%;
+    }
+}
+
+/* Media query untuk iPad Pro */
+
+
+/* @media screen and (max-width: 991px) { */
+@media (min-width: 768px) and (max-width: 991.98px) {  
+    .mainHeader {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav > a {
+        padding: 10px 15px; 
+        font-size: 14px; 
+    }
+
+    .secHome h1 {
+        font-size: 4vw;
+        padding-left: 8vw;
+        padding-top: 8vw;
+        padding-bottom: 20px;
+    }
+
+    .secHome p {
+        font-size: 1.8vw;
+        padding-left: 8vw;
+    }
+
+    .social-links {
+        bottom: 20px;
+        right: 40px;
+        gap: 10px;
+    }
+
+    .social-links img {
+        width: 3vw;
+    }
+
+    #section-profile {
+        padding-left: 9vw;
+        padding-right: 5vw;
+    }
+
+    .aboutme {
+        /* flex-direction: column; */
+        align-items: center;
+        gap: 5vw;
+    }
+
+    /* .prof-text .about-container {
+        justify-content: center;
+    } */
+    
+    .prof-text .cvbutton {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+    }
+
+    .prof-text {
+        /* text-align: center; */
+        padding-top: 20px;
+    }
+
+    .prof-text h1 {
+        font-size: 2.5vw;
+    }
+
+    .prof-text h5 {
+        margin-right: 14vw;
+        font-size: 1.6vw;
+    }
+
+    .prof-text p {
+        font-size: 1.8vw;
+    }
+
+    .prof-text .cvbutton {
+        width: 4vw;
+        height: 4vw;
+        cursor: pointer;
+    }
+
+    .prof-image img {
+        width: 18vw;
+        height: auto;
+        /* margin: 0; */
+    }
+
+    .container {
+        top: -1vw;
+        padding: 10px;
+        position: relative;
+        /* overflow: hidden; */
+    }
+
+    .rounded {
+        width: 150vw; /* Tetap melebihi viewport */
+        border-radius: 30%; /* Penyesuaian radius */
+    }
+
+    /* .kotak {
+
+    } */
+
+    .kolom {
+        /* width: 100%;
+        padding: 10px 0; */
+
+        width: 100%; /* Lebar penuh untuk setiap kolom */
+        margin-bottom: 3vw; /* Jarak antar kolom */
+    }
+
+    .icon img {
+        /* width: 15vw;
+        height: 15vw; */
+
+        width: 5vw;
+        height: auto;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+    }
+
+    .kolom h2 {
+        font-size: 1.4vw;
+        margin-bottom: 2vw;
+    }
+
+    .kolom h4, .kolom h3, .kolom p, ul {
+        /* font-size: 3vw; */
+        font-size: 1.25vw;
+        margin: 1vw 0;
+    }
+
+    .charts-container {
+        flex-direction: row; /* Susun chart secara vertikal */
+        gap: 15px; /* Kurangi jarak antar chart */
+        align-items: center; /* Pusatkan elemen */
+    }
+
+    .chart {
+        width: 26vw;
+        padding: 15px;
+        min-height: 200px;
+    }
+
+    .chart-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .bar-container {
+        margin-bottom: 12px;
+    }
+
+    .bar-label {
+        font-size: 14px;
+    }
+
+    .bar-wrapper {
+        height: 16px;
+    }
+
+    .bar-fill::after {
+        font-size: 11px;
+    } 
+
+    #section-projects {
+        padding-left: 10vw;
+        padding-right: 10vw;
+        height: 20vw;
+        top: -2vw;
+    }
+
+    .myproj{
+        padding-top: 0vh;
+    }
+
+    .proj-text h1 {
+    font-size: 2.8vw;
+    }
+
+    .proj-text h5 {
+        font-size: 1.8vw;
+    }
+
+    .proj-text h3 {
+        font-size: 1.4vw;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .bg-cardproj {
+        margin-top: 6vh;
+    }
+
+    .cards-container {
+        gap: 30px;
+        margin-top: -12vw;
+    }
+
+    .card {
+        width: 23vw;
+        height: auto;
+    }
+
+    .card h5 {
+        font-size: 1.5vw;
+    }
+
+    .card h1 {
+        font-size: 2vw;
+    }
+
+    .card p {
+        font-size: 1.5vw;
+        padding: 10px;
+    }
+
+    a.btn-proj {
+        font-size: 1.5vw;
+        padding: 10px 30px;
+        gap: 10px;
+    }
+
+    .btn-icon {
+        width: 2vw;
+    }
+
+    .line {
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+
+    .bg-service {
+        height: 40vw;
+    }
+
+    .bg-service h1 {
+        font-size: 3vw;
+    }
+
+    .bg-service h3 {
+        font-size: 1.8vw;
+        margin-top: 4vw;
+    }
+
+    .bg-service h5 {
+        font-size: 1.5vw;
+    }
+
+    .card-services {
+        gap: 30px; /* Kurangi jarak antar card */
+        height: auto; /* Ubah ke tinggi fleksibel */
+        margin-top: 3vw;
+    }
+
+    .cont-services {
+        width: 22vw;
+        height: auto;
+        padding: 20px;
+    }
+
+    .cont-services h1 {
+        font-size: 2vw;
+    }
+
+    .cont-services h4 {
+        font-size: 1.5vw;
+    }
+
+    .bg-startproj {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 50%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .bg-startproj h1 {
+        font-size: 2.5vw;
+        text-align: center;
+        /* margin-bottom: 10px; */
+    }
+
+    .hit-me-up-btn {
+        width: auto; /* Sesuaikan lebar tombol */
+        font-size: 1.5vw; /* Sesuaikan ukuran teks tombol */
+        padding: 10px 20px;
+    }
+
+    footer {
+        height: auto;
+        /* padding-top: 15vw; */
+    }
+
+    footer h1 {
+        font-size: 3vw; /* Sesuaikan ukuran teks untuk tablet */
+    }
+
+    footer h3 {
+        font-size: 1.5vw; /* Sesuaikan ukuran teks subjudul */
+        margin-bottom: 20px;
+    }
+
+    footer p {
+        font-size: 1.2vw;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        gap: 0px;
+        margin: 10px 0;
+    }
+
+    .social-icons a {
+        width: 9vw;
+        height: 9vw;
+    }
+
+    .social-icons img {
+        width: 50%; /* Ikon tetap proporsional */
+        height: 50%;
+    }
+}
+
+/* @media screen and (max-width: 767px) { */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .hamburger-menu {
+        display: flex; 
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #eeedf4;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        display: none; 
+    }
+
+    nav.show {
+        display: flex; 
+    }
+
+    nav > a {
+        font-size: 18px;
+        padding: 10px 0;
+        text-align: left; 
+    }
+
+/* @media screen and (min-width: 576px) and (max-width: 767px) { */
+    #section-home {
+        height: 50vw; 
+    }
+
+    .mainHeader {
+        padding-left: 18px;
+    }
+
+    .hamburger-menu {
+        display: flex; 
+    }
+
+    nav {
+        display: none; 
+    }
+
+    #section-home {
+        height: 60vw; /* Adjust height for mobile */
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .mainHeader {
+        padding-left: 18px;
+    }
+
+    .secHome h1 {
+        font-size: 9vw;
+        padding-left: 0vw;
+        padding-top: 15vw;
+        padding-bottom: 20px;
+        display: grid;
+        place-items: center;
+        /* align-items: center; */
+    }
+
+    .secHome p {
+        font-size: 3vw;
+        padding-left: 0vw;
+        padding: 3vw;
+        display: grid;
+        place-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-links {
+        bottom: 3vw;
+        right: 20px;
+        gap: 2vw;
+    }
+
+    .social-links img {
+        width: 4vw; /* Adjust icon size for mobile */
+    }
+
+    #section-profile {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .aboutme {
+        flex-direction: row;
+        gap: 50px;
+        /* text-align: center; */
+    }
+
+    .prof-text {
+        padding-top: 20px; /* Reduce padding */
+    }
+
+    /* .prof-text .about-container {
+       justify-content: center;
+    } */
+
+    .prof-text h1 {
+        font-size: 3vh; /* Adjust font size */
+    }
+
+    .prof-text h5 {
+        margin-right: 8vw;
+        font-size: 1.8vh;
+    }
+
+    .prof-text p {
+        font-size: 1.8vw;
+    }
+
+    .prof-image img {
+        width: 30vw;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .prof-text .cvbutton {
+        width: 4vw;
+        height: 4vw;
+        cursor: pointer;
+    }
+
+    .container {
+        top: 0;
+        padding: 10px;
+    }
+
+    .rounded {
+        width: 150vw; /* Lebar default */
+        top: 2vh; /* Posisi lebih ke atas */
+        border-radius: 40%; /* Tetap sesuai default */
+    }
+
+    .kotak {
+        width: 92vw;
+    }
+
+    .kolom {
+        /* width: 100%;
+        padding: 10px 0; */
+
+        width: 100%; /* Lebar penuh untuk setiap kolom */
+        margin-bottom: 3vw; /* Jarak antar kolom */
+    }
+
+    .icon img {
+        /* width: 15vw;
+        height: 15vw; */
+
+        width: 5vw;
+        height: auto;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+    }
+
+    .kolom h2 {
+        /* font-size: 4vw; */
+        font-size: 1.3vw;
+        margin-bottom: 2vw;
+    }
+
+    .kolom h4, .kolom h3, .kolom p, ul {
+        /* font-size: 3vw; */
+        font-size: 1.3vw;
+        margin: 1vw 0;
+    }
+
+    ul {
+        font-size: 1.3vw;
+    }
+
+    .charts-container {
+        flex-direction: row; /* Susun chart secara vertikal */
+        gap: 15px; /* Kurangi jarak antar chart */
+        align-items: center; /* Pusatkan elemen */
+    }
+
+    .chart {
+        width: 25vw;
+        padding: 15px;
+        min-height: 200px;
+    }
+
+    .chart-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .bar-label {
+        flex: 0 0 10vw;
+        font-size: 12px;
+    }
+
+    .bar-wrapper {
+        height: 16px;
+    }
+
+    .bar-fill::after {
+        font-size: 10px;
+    }
+
+    #section-projects {
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 35vw;
+    }
+
+    .myproj {
+        flex-direction: column; /* Susun elemen secara vertikal */
+        gap: 20px; /* Berikan jarak antar elemen */
+        padding-top: 3vh;
+    }
+
+    .proj-text h1 {
+        font-size: 4vw; /* Sesuaikan ukuran judul */
+    }
+
+    .proj-text h5 {
+        font-size: 1.8vw;
+    }
+
+    .proj-text h3 {
+        font-size: 2vh; /* Perkecil ukuran teks deskripsi */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .line {
+        margin-top: 4vw;
+    }
+
+    .cards-container {
+        gap: 30px;
+        margin-top: -10vw;
+        width: 95vw;
+    }
+
+    .bg-cardproj {
+        margin-top: 3vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+        width: 39%;
+        height: auto;
+    }
+
+    .card h1 {
+        font-size: 2.5vh; /* Sesuaikan ukuran judul kartu */
+    }
+
+    .card p {
+        font-size: 1.8vh; /* Perkecil ukuran teks kartu */
+        padding: 10px; /* Kurangi padding */
+    }
+
+    a.btn-proj {
+        font-size: 1.8vh; /* Perkecil ukuran tombol */
+        padding: 8px 30px;
+        gap: 10px;
+    }
+
+    .btn-icon {
+        width: 2.5vh; /* Sesuaikan ukuran ikon */
+    }
+
+    .bg-service {
+        height: 76vw;
+    }
+
+    .bg-service h1 {
+        font-size: 4vw;
+
+    }
+
+    .bg-service h5 {
+        font-size: 2vw;
+    }
+
+    .bg-service h3 {
+        margin-top: 4.5vw;
+        font-size: 2.5vw;
+    }
+
+    .card-services {
+        gap: 20px;
+        margin-top: 4vw;
+        /* flex-direction: column;  */
+    }
+
+    .cont-services {
+        width: 34%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .cont-services h1 {
+        font-size: 3vw;
+    }
+
+    .cont-services h4 {
+        font-size: 2vw;
+    }
+
+    .start-proj {
+        height: 1vw;
+        margin-top: -5vw;
+    }
+
+    .bg-startproj {
+        /* flex-direction: column; */
+        justify-content: space-around;
+        align-items: center;
+        width: 59%;
+        height: 39%;
+    }
+
+    .bg-startproj h1 {
+        font-size: 3vw;
+        /* margin-bottom: 15px; */
+    }
+
+    .hit-me-up-btn {
+        font-size: 1.8vw;
+        padding: 8px 9px;
+        width: 15%;
+    }
+
+    footer {
+        height: auto;
+        padding-top: 13vw;
+    }
+
+    footer h1 {
+        font-size: 4vw; /* Perbesar teks judul */
+    }
+
+    footer h3 {
+        font-size: 2vw; /* Perbesar teks subjudul */
+    }
+
+    footer p {
+        font-size: 1.5vw;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    footer hr {
+        margin-top: 6px;
+    }
+
+    .social-icons {
+        margin: 0px auto;
+    }
+
+    .social-icons a {
+        width: 10vw; /* Perbesar ikon untuk layar kecil */
+        height: 10vw;
+    }
+
+    .social-icons img {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+/* @media screen and (max-width: 767px) { */
+@media (min-width: 481px) and (max-width: 575.98px) {
+    .hamburger-menu {
+        display: flex; 
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #eeedf4;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        display: none; 
+    }
+
+    nav.show {
+        display: flex; 
+    }
+
+    nav > a {
+        font-size: 18px;
+        padding: 10px 0;
+        text-align: left; 
+    }
+
+    #section-home {
+        height: 50vw; 
+    }
+
+    .mainHeader {
+        padding-left: 18px;
+    }
+
+    .hamburger-menu {
+        display: flex; 
+    }
+
+    nav {
+        display: none; 
+    }
+
+    #section-home {
+        height: 60vw; /* Adjust height for mobile */
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .mainHeader {
+        padding-left: 18px;
+    }
+
+    .secHome h1 {
+        font-size: 9vw;
+        padding-left: 0vw;
+        padding-top: 15vw;
+        padding-bottom: 20px;
+        display: grid;
+        place-items: center;
+        /* align-items: center; */
+    }
+
+    .secHome p {
+        font-size: 3vw;
+        padding-left: 0vw;
+        padding: 3vw;
+        display: grid;
+        place-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-links {
+        bottom: 3vw;
+        right: 20px;
+        gap: 2vw;
+    }
+
+    .social-links img {
+        width: 4vw; /* Adjust icon size for mobile */
+    }
+
+    #section-profile {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .aboutme {
+        flex-direction: row;
+        gap: 50px;
+        /* text-align: center; */
+    }
+
+    .prof-text {
+        padding-top: 20px; /* Reduce padding */
+    }
+
+    .prof-text h1 {
+        font-size: 2.7vw;
+    }
+
+    .prof-text h5 {
+        margin-right: 8vw;
+        font-size: 1.8vw;
+    }
+
+    .prof-text p {
+        font-size: 1.8vw;
+    }
+
+    .prof-text .cvbutton {
+        width: 4vw;
+        height: 4vw;
+        cursor: pointer;
+    }
+
+    .prof-image img {
+        width: 30vw;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .container {
+        top: 0;
+        padding: 10px;
+    }
+
+    .rounded {
+        width: 150vw; /* Lebar default */
+        top: 2vh; /* Posisi lebih ke atas */
+        border-radius: 40%; /* Tetap sesuai default */
+    }
+
+    .kotak {
+        height: 66vw;
+        width: 92vw;
+    }
+
+    .kolom {
+        /* width: 100%;
+        padding: 10px 0; */
+
+        width: 100%; /* Lebar penuh untuk setiap kolom */
+        margin-bottom: 3vw; /* Jarak antar kolom */
+    }
+
+    .icon img {
+        /* width: 15vw;
+        height: 15vw; */
+
+        width: 5vw;
+        height: auto;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+    }
+
+    .kolom h2 {
+        /* font-size: 4vw; */
+        font-size: 1.9vw;
+        margin-bottom: 2vw;
+    }
+
+    .kolom h4, .kolom h3, .kolom p, ul {
+        font-size: 2vw;
+        margin: 1vw 0px;
+    }
+
+    ul {
+        font-size: 2vw;
+    }
+
+    .charts-container {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        /* width: 56vw; */
+    }
+
+    .chart {
+        width: 44vw;
+        padding: 15px;
+        min-height: 200px;
+    }
+
+    .chart-title {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .bar-label {
+        flex: 0 0 80px;
+        font-size: 12px;
+    }
+
+    .bar-wrapper {
+        height: 16px;
+    }
+
+    .bar-fill::after {
+        font-size: 10px;
+    }
+
+    #section-projects {
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 35vw;
+    }
+
+    .myproj {
+        flex-direction: column; /* Susun elemen secara vertikal */
+        gap: 20px; /* Berikan jarak antar elemen */
+        padding-top: 3vh;
+    }
+
+    .proj-text h1 {
+        font-size: 4vw; /* Sesuaikan ukuran judul */
+    }
+
+    .proj-text h5 {
+        font-size: 1.8vw;
+    }
+
+    .proj-text h3 {
+        font-size: 3vw;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .line {
+        margin-top: 4vw;
+    }
+
+    .cards-container {
+        gap: 30px;
+        margin-top: -10vw;
+        width: 95vw;
+    }
+
+    .bg-cardproj {
+        margin-top: 3vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card {
+        width: 39%;
+        height: auto;
+    }
+
+    .card h1 {
+        font-size: 2.5vh; /* Sesuaikan ukuran judul kartu */
+    }
+
+    .card p {
+        font-size: 1.8vh; /* Perkecil ukuran teks kartu */
+        padding: 10px; /* Kurangi padding */
+    }
+
+    a.btn-proj {
+        font-size: 1.8vh; /* Perkecil ukuran tombol */
+        padding: 8px 30px;
+        gap: 10px;
+    }
+
+    .btn-icon {
+        width: 2.5vh; /* Sesuaikan ukuran ikon */
+    }
+
+    .bg-service {
+        height: 78vw;
+    }
+
+    .bg-service h1 {
+        font-size: 4vw;
+
+    }
+
+    .bg-service h5 {
+        font-size: 2vw;
+    }
+
+    .bg-service h3 {
+        margin-top: 4.5vw;
+        font-size: 2.5vw;
+    }
+
+    .card-services {
+        gap: 20px;
+        margin-top: 4vw;
+        /* flex-direction: column;  */
+    }
+
+    .cont-services {
+        width: 34%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .cont-services h1 {
+        font-size: 3vw;
+    }
+
+    .cont-services h4 {
+        font-size: 2vw;
+    }
+
+    .start-proj {
+        height: 1vw;
+        margin-top: -5vw;
+    }
+
+    .bg-startproj {
+        /* flex-direction: column; */
+        justify-content: space-around;
+        align-items: center;
+        width: 59%;
+        height: 39%;
+    }
+
+    .bg-startproj h1 {
+        font-size: 3vw;
+        /* margin-bottom: 15px; */
+    }
+
+    .hit-me-up-btn {
+        font-size: 1.8vw;
+        padding: 8px 9px;
+        width: 15%;
+    }
+
+    footer {
+        height: auto;
+        padding-top: 13vw;
+    }
+
+    footer h1 {
+        font-size: 4vw; /* Perbesar teks judul */
+    }
+
+    footer h3 {
+        font-size: 2vw; /* Perbesar teks subjudul */
+    }
+
+    footer p {
+        font-size: 1.5vw;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    footer hr {
+        margin-top: 6px;
+    }
+
+    .social-icons {
+        margin: 0px auto;
+    }
+
+    .social-icons a {
+        width: 10vw; /* Perbesar ikon untuk layar kecil */
+        height: 10vw;
+    }
+
+    .social-icons img {
+        width: 50%;
+        height: 50%;
+    }
+}
+
+/* Responsive Small Mobile / potrait phone */
+/* @media screen and (max-width: 575px) { */
+@media (min-width: 376px) and (max-width: 480.98px) {
+    .hamburger-menu {
+        display: flex; 
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #eeedf4;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        display: none; 
+    }
+
+    nav.show {
+        display: flex; 
+    }
+
+    nav > a {
+        font-size: 18px;
+        padding: 10px 0;
+        text-align: left; 
+    }
+    
+    #section-home {
+        height: 60vw; /* Adjust height for mobile */
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .mainHeader {
+        padding-left: 18px;
+    }
+
+    .hamburger-menu {
+        display: flex; 
+    }
+
+    nav {
+        display: none; 
+    }
+
+    .secHome h1 {
+        font-size: 9vw;
+        padding-left: 0vw;
+        padding-top: 15vw;
+        padding-bottom: 20px;
+        display: grid;
+        place-items: center;
+        /* align-items: center; */
+    }
+
+    .secHome p {
+        font-size: 3vw;
+        padding-left: 0vw;
+        padding: 3vw;
+        display: grid;
+        place-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-links {
+        bottom: 3vw;
+        right: 20px;
+        gap: 2vw;
+    }
+
+    .social-links img {
+        width: 4vw; /* Adjust icon size for mobile */
+    }
+
+    .container {
+        top: -5%; /* Sesuaikan posisi container */
+    }
+
+    .rounded {
+        /* width: 130vw; 
+        min-height: 93%; 
+        border-radius: 22%; */
+
+        width: 200vw; /* Lebar lebih besar untuk efek penuh di perangkat kecil */
+        top: 5vh; /* Atur posisi agar tidak terlalu atas */
+        border-radius: 50%; /* Buat lebih bulat */
+    }
+
+    .kotak {
+        flex-direction: column; /* Tetap vertikal untuk mobile */
+        align-items: center; /* Pusatkan elemen */
+        padding: 4vw; /* Kurangi padding */
+        height: auto; /* Tinggi otomatis */
+        width: 84vw;
+    }
+
+    .sekat {
+        width: 100%;
+        height: 0.5px;
+        background-color: #000000;
+        margin: 0 auto;
+    }
+
+    .kolom {
+        width: 100%;
+        /* margin-bottom: 5vw; */
+    }
+
+    .icon img {
+        width: 13vw;
+        height: auto;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .kolom h2 {
+        font-size: 5vw;
+        margin-bottom: 3vw;
+    }
+
+    .kolom h4,
+    .kolom h3,
+    .kolom p {
+        font-size: 4vw;
+        margin: 1.5vw 0px;
+    }
+
+    ul{
+        font-size: 4vw;
+    }
+
+    #section-profile {
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    .aboutme {
+        gap: 2vh;
+        flex-direction: column;
+        padding: 3vw;
+        place-items: center;
+        text-align: center;
+    }
+
+    .prof-text .about-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .prof-text {
+        padding-top: 0;
+    }
+
+    .prof-text h1 {
+        font-size: 2.5vh; /* Smaller font size */
+    }
+
+    .prof-text h5 {
+        margin-right: 12vw;
+    }
+
+    .prof-text p {
+        font-size: 1.8vh; /* Smaller font size */
+    }
+
+    .prof-image img {
+        width: 70vw;
+        height: auto;
+        border-radius: 20%;
+        margin-right: 0px;
+    }
+
+    .prof-text .cvbutton {
+        width: 7vw;
+        height: 7vw;
+        cursor: pointer;
+    }
+
+    .charts-container {
+        flex-direction: column; /* Tetap vertikal untuk mobile */
+        gap: 10px; /* Kurangi jarak antar chart */
+        align-items: center; /* Pusatkan elemen */
+    }
+
+    .chart {
+        width: 55vw;
+        padding: 10px;
+        min-height: 55vw;
+    }
+
+    .chart-title {
+        font-size: 16px; /* Perkecil ukuran teks judul lebih lanjut */
+        margin-bottom: 10px;
+    }
+
+    .bar-label {
+        flex: 0 0 70px;
+        font-size: 14px;
+    }
+
+    .bar-wrapper {
+        height: 19px; /* Tinggi bar lebih kecil */
+    }
+
+    .bar-fill::after {
+        font-size: 10px; /* Perkecil teks persentase lebih lanjut */
+    }
+
+    #section-projects {
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 50vw;
+    }
+
+    .myproj {
+        flex-direction: column; /* Tetap vertikal untuk mobile */
+        gap: 15px;
+        padding-top: 2vh;
+    }
+
+    .proj-text h1 {
+        font-size: 6vw;
+    }
+
+    .proj-text h5 {
+        font-size: 3.8vw;
+    }
+
+    .proj-text h3 {
+        font-size: 2.5vw;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .cards-container {
+        /* flex-direction: column; */
+        gap: 20px;
+        margin-top: -75vw;
+        /* margin-top: 0; */
+    }
+
+    .bg-cardproj {
+        margin-top: 30vh;
+    }
+
+    .card {
+        width: 33%;
+        height: auto;
+    }
+
+    .card h1 { 
+        font-size: 2vh; /* Sesuaikan ukuran judul kartu */
+    }
+
+    .card h5 {
+        /* margin: 0px; */
+        margin-top: 1vh;
+        /* opacity: 0.60; */
+        font-size: 1.7vh;
+    }
+
+    .card p {
+        font-size: 1.6vh;
+        padding: 5px;
+    }
+
+    a.btn-proj {
+        font-size: 2.7vw;
+        padding: 6px 20px;
+        gap: 8px;
+    }
+
+    .btn-icon {
+        width: 1.7vh;
+    }
+
+    .line {
+        margin-top: 5vw;
+    }
+
+    .bg-service {
+        height: 103vw;
+    }
+
+    .bg-service h1 {
+        font-size: 5vw; /* Perbesar font title */
+    }
+
+    .bg-service h5 {
+        font-size: 3vw; /* Perbesar subtitle */
+        margin-top: 1vw;
+    }
+
+    .bg-service h3 {
+        margin-top: 28.5vw;
+        font-size: 3.5vw;
+    }
+
+    .card-services {
+        gap: 15px;
+        /* flex-direction: column; */
+        margin-top: 5vw;
+        height: 42vw;
+    }
+
+    .cont-services {
+        width: 38%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .cont-services h1 {
+        font-size: 4vw;
+        margin-top: 1vw;
+    }
+
+    .cont-services h4 {
+        font-size: 2.6vw;
+        margin-top: 3vw;
+    }
+
+    .cont-services:hover {
+        transform: scale(1.03); /* Efek hover tetap tetapi lebih kecil */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Shadow lebih ringan */
+    }
+
+    .start-proj {
+        /* height: 20vw; */
+        margin-top: -5vw;
+    }
+    
+    .bg-startproj {
+        /* flex-direction: column; */
+        width: 62%;
+        padding: 8px;
+        height: 63%;
+        justify-content: space-around;
+    }
+    
+    .bg-startproj h1 {
+        font-size: 3vw;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    
+    .hit-me-up-btn {
+        font-size: 2.5vw;
+        width: 25%;
+        /* padding: 9px; */
+        height: 35%;
+    }
+
+    footer h1 {
+        font-size: 5vw; /* Ukuran teks judul untuk ponsel */
+    }
+
+    footer h3 {
+        font-size: 3vw; /* Ukuran teks subjudul */
+        margin-bottom: 15px;
+    }
+
+    footer p {
+        font-size: 2vw;
+        margin-top: 7px;
+        margin-bottom: 24px;
+    }
+
+    .social-icons {
+        gap: 0px;
+        margin: 0px 0;
+    }
+
+    .social-icons a {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .social-icons img {
+        width: 45%;
+        height: 45%;
+    }
+}
+
+
+@media (min-width: 345px) and (max-width: 375.98px) {
+    .hamburger-menu {
+        display: flex; 
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #eeedf4;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        display: none; 
+    }
+
+    nav.show {
+        display: flex; 
+    }
+
+    nav > a {
+        font-size: 18px;
+        padding: 10px 0;
+        text-align: left; 
+    }
+    
+    #section-home {
+        height: 60vw; /* Adjust height for mobile */
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .mainHeader {
+        padding-left: 18px;
+    }
+
+    .hamburger-menu {
+        display: flex; 
+    }
+
+    nav {
+        display: none; 
+    }
+
+    .secHome h1 {
+        font-size: 9vw;
+        padding-left: 0vw;
+        padding-top: 15vw;
+        padding-bottom: 20px;
+        display: grid;
+        place-items: center;
+        /* align-items: center; */
+    }
+
+    .secHome p {
+        font-size: 3vw;
+        padding-left: 0vw;
+        padding: 3vw;
+        display: grid;
+        place-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-links {
+        bottom: 3vw;
+        right: 20px;
+        gap: 2vw;
+    }
+
+    .social-links img {
+        width: 4vw; /* Adjust icon size for mobile */
+    }
+
+    .container {
+        top: -5%; /* Sesuaikan posisi container */
+    }
+
+    .rounded {
+        width: 200vw; /* Lebar lebih besar untuk efek penuh di perangkat kecil */
+        top: 5vh; /* Atur posisi agar tidak terlalu atas */
+        border-radius: 50%; /* Buat lebih bulat */
+    }
+
+    .kotak {
+        flex-direction: column; /* Tetap vertikal untuk mobile */
+        align-items: center; /* Pusatkan elemen */
+        padding: 4vw; /* Kurangi padding */
+        height: auto; /* Tinggi otomatis */
+        width: 84vw;
+    }
+
+    .sekat {
+        width: 100%;
+        height: 0.5px;
+        background-color: #000000;
+        margin: 0 auto;
+    }
+
+    .kolom {
+        width: 100%;
+        /* margin-bottom: 5vw; */
+    }
+
+    .icon img {
+        width: 13vw;
+        height: auto;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .kolom h2 {
+        font-size: 3vh;
+        margin-bottom: 3vw;
+    }
+
+    .kolom h4,
+    .kolom h3,
+    .kolom p {
+        font-size: 2vh;
+        margin: 1.5vw 0;
+    }
+
+    ul{
+        font-size: 2vh;
+    }
+
+    #section-profile {
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    .aboutme {
+        gap: 2vh;
+        flex-direction: column;
+        padding: 3vw;
+        place-items: center;
+        text-align: center;
+    }
+
+    .prof-text .about-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .prof-text {
+        padding-top: 0;
+    }
+
+    .prof-text h1 {
+        font-size: 2.5vh; /* Smaller font size */
+    }
+
+    .prof-text h5 {
+        margin-right: 12vw;
+    }
+
+    .prof-text p {
+        font-size: 1.8vh; /* Smaller font size */
+    }
+
+    .prof-image img {
+        width: 70vw;
+        height: auto;
+        border-radius: 20%;
+        margin-right: 0px;
+    }
+
+    .prof-text .cvbutton {
+        width: 7vw;
+        height: 7vw;
+        cursor: pointer;
+    }
+
+    .charts-container {
+        flex-direction: column; /* Tetap vertikal untuk mobile */
+        gap: 10px; /* Kurangi jarak antar chart */
+        align-items: center; /* Pusatkan elemen */
+    }
+
+    .chart {
+        width: 55vw;
+        padding: 10px;
+        min-height: 55vw;
+    }
+
+    .chart-title {
+        font-size: 16px; /* Perkecil ukuran teks judul lebih lanjut */
+        margin-bottom: 10px;
+    }
+
+    .bar-label {
+        flex: 0 0 70px;
+        font-size: 14px;
+    }
+
+    .bar-wrapper {
+        height: 19px; /* Tinggi bar lebih kecil */
+    }
+
+    .bar-fill::after {
+        font-size: 10px; /* Perkecil teks persentase lebih lanjut */
+    }
+
+    #section-projects {
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 50vw;
+    }
+
+    .myproj {
+        flex-direction: column; /* Tetap vertikal untuk mobile */
+        gap: 15px;
+        padding-top: 2vh;
+    }
+
+    .proj-text h1 {
+        font-size: 6vw;
+    }
+
+    .proj-text h5 {
+        font-size: 3.8vw;
+    }
+
+    .proj-text h3 {
+        font-size: 3.3vw;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .cards-container {
+        /* flex-direction: column; */
+        gap: 20px;
+        margin-top: -48vw;
+        /* margin-top: 0; */
+    }
+
+    /* .bg-cardproj {
+        margin-top: 30vh;
+    } */
+
+    .card {
+        width: 33%;
+        height: auto;
+    }
+
+    .card h1 { 
+        font-size: 2vh; /* Sesuaikan ukuran judul kartu */
+    }
+
+    .card h5 {
+        /* margin: 0px; */
+        margin-top: 1vh;
+        /* opacity: 0.60; */
+        font-size: 1.7vh;
+    }
+
+    .card p {
+        font-size: 1.6vh;
+        padding: 5px;
+    }
+
+    a.btn-proj {
+        font-size: 2.7vw;
+        padding: 6px 20px;
+        gap: 8px;
+    }
+
+    .btn-icon {
+        width: 1.7vh;
+    }
+
+    .line {
+        margin-top: 5vw;
+    }
+
+    .bg-service {
+        height: 103vw;
+    }
+
+    .bg-service h1 {
+        font-size: 5vw; /* Perbesar font title */
+    }
+
+    .bg-service h5 {
+        font-size: 3vw; /* Perbesar subtitle */
+        margin-top: 1vw;
+    }
+
+    .bg-service h3 {
+        margin-top: 28.5vw;
+        font-size: 3.5vw;
+    }
+
+    .card-services {
+        gap: 15px;
+        /* flex-direction: column; */
+        margin-top: 5vw;
+        height: 42vw;
+    }
+
+    .cont-services {
+        width: 38%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .cont-services h1 {
+        font-size: 4vw;
+        margin-top: 1vw;
+    }
+
+    .cont-services h4 {
+        font-size: 2.6vw;
+        margin-top: 3vw;
+    }
+
+    .cont-services:hover {
+        transform: scale(1.03); /* Efek hover tetap tetapi lebih kecil */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Shadow lebih ringan */
+    }
+
+    .start-proj {
+        /* height: 20vw; */
+        margin-top: -5vw;
+    }
+    
+    .bg-startproj {
+        /* flex-direction: column; */
+        width: 62%;
+        padding: 8px;
+        height: 63%;
+        justify-content: space-around;
+    }
+    
+    .bg-startproj h1 {
+        font-size: 3vw;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    
+    .hit-me-up-btn {
+        font-size: 2.5vw;
+        width: 25%;
+        /* padding: 9px; */
+        height: 35%;
+    }
+
+    footer h1 {
+        font-size: 5vw; /* Ukuran teks judul untuk ponsel */
+    }
+
+    footer h3 {
+        font-size: 3vw; /* Ukuran teks subjudul */
+        margin-bottom: 15px;
+    }
+
+    footer p {
+        font-size: 2vw;
+        margin-top: 7px;
+        margin-bottom: 24px;
+    }
+
+    .social-icons {
+        gap: 0px;
+        margin: 0px 0;
+    }
+
+    .social-icons a {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .social-icons img {
+        width: 45%;
+        height: 45%;
+    }
+}
+
+@media (max-width: 344.98px) {
+    .hamburger-menu {
+        display: flex; 
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #eeedf4;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        display: none; 
+    }
+
+    nav.show {
+        display: flex; 
+    }
+
+    nav > a {
+        font-size: 18px;
+        padding: 10px 0;
+        text-align: left; 
+    }
+    
+    #section-home {
+        height: 60vw; /* Adjust height for mobile */
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .mainHeader {
+        padding-left: 18px;
+    }
+
+    .hamburger-menu {
+        display: flex; 
+    }
+
+    nav {
+        display: none; 
+    }
+
+    .secHome h1 {
+        font-size: 9vw;
+        padding-left: 0vw;
+        padding-top: 15vw;
+        padding-bottom: 20px;
+        display: grid;
+        place-items: center;
+        /* align-items: center; */
+    }
+
+    .secHome p {
+        font-size: 3vw;
+        padding-left: 0vw;
+        padding: 3vw;
+        display: grid;
+        place-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-links {
+        bottom: 3vw;
+        right: 20px;
+        gap: 2vw;
+    }
+
+    .social-links img {
+        width: 4vw; /* Adjust icon size for mobile */
+    }
+
+    .container {
+        top: -5%; /* Sesuaikan posisi container */
+    }
+
+    .rounded {
+        /* width: 130vw; 
+        min-height: 93%; 
+        border-radius: 22%; */
+
+        width: 200vw; /* Lebar lebih besar untuk efek penuh di perangkat kecil */
+        top: 5vh; /* Atur posisi agar tidak terlalu atas */
+        border-radius: 50%; /* Buat lebih bulat */
+    }
+
+    .kotak {
+        flex-direction: column; /* Tetap vertikal untuk mobile */
+        align-items: center; /* Pusatkan elemen */
+        padding: 4vw; /* Kurangi padding */
+        height: auto; /* Tinggi otomatis */
+        width: 84vw;
+    }
+
+    .sekat {
+        width: 100%;
+        height: 0.5px;
+        background-color: #000000;
+        margin: 0 auto;
+    }
+
+    .kolom {
+        width: 100%;
+        /* margin-bottom: 5vw; */
+    }
+
+    .icon img {
+        width: 13vw;
+        height: auto;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .kolom h2 {
+        font-size: 6vw;
+        margin-bottom: 3vw;
+    }
+
+    .kolom h4,
+    .kolom h3,
+    .kolom p {
+        font-size: 4vw;
+        margin: 1.5vw 0;
+    }
+
+    ul{
+        font-size: 4vw;
+    }
+
+    #section-profile {
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    .aboutme {
+        gap: 2vh;
+        flex-direction: column;
+        padding: 3vw;
+        place-items: center;
+        text-align: center;
+    }
+
+    .prof-text .about-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .prof-text {
+        padding-top: 0;
+    }
+
+    .prof-text h1 {
+        font-size: 2.5vh; /* Smaller font size */
+    }
+
+    .prof-text h5 {
+        margin-right: 12vw;
+    }
+
+    .prof-text p {
+        font-size: 1.8vh; /* Smaller font size */
+    }
+
+    .prof-image img {
+        width: 70vw;
+        height: auto;
+        border-radius: 20%;
+        margin-right: 0px;
+    }
+
+    .prof-text .cvbutton {
+        width: 7vw;
+        height: 7vw;
+        cursor: pointer;
+    }
+
+    .charts-container {
+        flex-direction: column; /* Tetap vertikal untuk mobile */
+        gap: 10px; /* Kurangi jarak antar chart */
+        align-items: center; /* Pusatkan elemen */
+    }
+
+    .chart {
+        width: 55vw;
+        padding: 10px;
+        min-height: 55vw;
+    }
+
+    .chart-title {
+        font-size: 16px; /* Perkecil ukuran teks judul lebih lanjut */
+        margin-bottom: 10px;
+    }
+
+    .bar-label {
+        flex: 0 0 70px;
+        font-size: 14px;
+    }
+
+    .bar-wrapper {
+        height: 19px; /* Tinggi bar lebih kecil */
+    }
+
+    .bar-fill::after {
+        font-size: 10px; /* Perkecil teks persentase lebih lanjut */
+    }
+
+    #section-projects {
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 50vw;
+    }
+
+    .myproj {
+        flex-direction: column; /* Tetap vertikal untuk mobile */
+        gap: 15px;
+        padding-top: 2vh;
+    }
+
+    .proj-text h1 {
+        font-size: 6vw;
+    }
+
+    .proj-text h5 {
+        font-size: 3.8vw;
+    }
+
+    .proj-text h3 {
+        font-size: 3.3vw;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .cards-container {
+        /* flex-direction: column; */
+        gap: 20px;
+        margin-top: -61vw;
+        /* margin-top: 0; */
+    }
+
+    /* .bg-cardproj {
+        margin-top: 30vh;
+    } */
+
+    .card {
+        width: 33%;
+        height: auto;
+    }
+
+    .card h1 { 
+        font-size: 2vh; /* Sesuaikan ukuran judul kartu */
+    }
+
+    .card h5 {
+        /* margin: 0px; */
+        margin-top: 1vh;
+        /* opacity: 0.60; */
+        font-size: 1.7vh;
+    }
+
+    .card p {
+        font-size: 1.6vh;
+        padding: 5px;
+    }
+
+    a.btn-proj {
+        font-size: 2.7vw;
+        padding: 6px 20px;
+        gap: 8px;
+    }
+
+    .btn-icon {
+        width: 1.7vh;
+    }
+
+    .line {
+        margin-top: 5vw;
+    }
+
+    .bg-service {
+        height: 103vw;
+    }
+
+    .bg-service h1 {
+        font-size: 5vw; /* Perbesar font title */
+    }
+
+    .bg-service h5 {
+        font-size: 3vw; /* Perbesar subtitle */
+        margin-top: 1vw;
+    }
+
+    .bg-service h3 {
+        margin-top: 28.5vw;
+        font-size: 3.5vw;
+    }
+
+    .card-services {
+        gap: 15px;
+        /* flex-direction: column; */
+        margin-top: 5vw;
+        height: 42vw;
+    }
+
+    .cont-services {
+        width: 38%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .cont-services h1 {
+        font-size: 4vw;
+        margin-top: 1vw;
+    }
+
+    .cont-services h4 {
+        font-size: 2.6vw;
+        margin-top: 3vw;
+    }
+
+    .cont-services:hover {
+        transform: scale(1.03); /* Efek hover tetap tetapi lebih kecil */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Shadow lebih ringan */
+    }
+
+    .start-proj {
+        /* height: 20vw; */
+        margin-top: -5vw;
+    }
+    
+    .bg-startproj {
+        /* flex-direction: column; */
+        width: 62%;
+        padding: 8px;
+        height: 63%;
+        justify-content: space-around;
+    }
+    
+    .bg-startproj h1 {
+        font-size: 3vw;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    
+    .hit-me-up-btn {
+        font-size: 2.5vw;
+        width: 25%;
+        /* padding: 9px; */
+        height: 35%;
+    }
+
+    footer h1 {
+        font-size: 5vw; /* Ukuran teks judul untuk ponsel */
+    }
+
+    footer h3 {
+        font-size: 3vw; /* Ukuran teks subjudul */
+        margin-bottom: 15px;
+    }
+
+    footer p {
+        font-size: 2vw;
+        margin-top: 7px;
+        margin-bottom: 24px;
+    }
+
+    .social-icons {
+        gap: 0px;
+        margin: 0px 0;
+    }
+
+    .social-icons a {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .social-icons img {
+        width: 45%;
+        height: 45%;
+    }
+}
+
+/* Hamburger Menu Animation (Active State) */
+.hamburger-menu.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
